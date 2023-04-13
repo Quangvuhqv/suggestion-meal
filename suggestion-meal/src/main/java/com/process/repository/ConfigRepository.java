@@ -11,6 +11,6 @@ import java.util.List;
 
 @Repository
 public interface ConfigRepository extends JpaRepository<Config, Long> {
-    @Query(value = "SELECT c FROM Config c JOIN Categories cg ON c.categoryId = cg.id WHERE cg.code = :code ")
-    List<Config> getConfigByCategory(@Param("code")String code);
+    @Query(value = "SELECT c FROM Config c JOIN Categories cg ON c.categoryId = cg.id WHERE cg.code = :code AND c.status = :status ")
+    List<Config> getConfigByCategory(@Param("code")String code, @Param("status")Integer status);
 }

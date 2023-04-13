@@ -29,4 +29,14 @@ public class Config {
         MEAL_TYPE,
         INGREDIENT_TYPE
     }
+
+    public enum Status {
+        ACTIVE(1),
+        INACTIVE(0);
+        public final Integer value;
+
+        Status(int i) {
+            value = i;
+        }
+    }
 }

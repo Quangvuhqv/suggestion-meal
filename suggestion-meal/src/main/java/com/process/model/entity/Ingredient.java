@@ -23,5 +23,15 @@ public class Ingredient {
     private String name;
     private String description;
     private Integer status;
+    public enum Status {
+        ACTIVE(1),
+        INACTIVE(0);
+        public final Integer value;
+
+        Status(int i) {
+            value = i;
+        }
+    }
+
 
 }
