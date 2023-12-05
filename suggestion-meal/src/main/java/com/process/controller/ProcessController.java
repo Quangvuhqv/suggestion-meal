@@ -28,4 +28,9 @@ public class ProcessController {
     public ResponseEntity<List<MenuDTO>> getAllMeal() {
         return ResponseEntity.ok().body(processService.getAllMenu());
     }
+
+    @GetMapping(value="/export")
+    public ResponseEntity<List<MenuDTO>> exportAllMeal() {
+        return ResponseEntity.ok().body(processService.exportAllMeal());
+    }
 }
